@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIERTOREN</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./code.js"></script>
+    <link rel="stylesheet" href="./stylesheet.css">
+</head>
+<body id="Cases">
+    <header class="max-w-screen-2xl relative h-16 mx-5 md:mx-20 2xl:mx-auto">
+        <nav id="NavBar" class="absolute z-10 max-w-full h-40 w-full mx-auto flex justify-between" aria-label="Global">
+            <a class="mt-3" aria-expanded="false">
+                <svg id="openNavIcon" onclick="openSidebar()" class="xl:hidden -ml-0 md:-ml-7 block h-8 w-8 text-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </a>
+            <a href="#" class="absolute bottom-0 ml-20 mb-2 md:ml-6 2xl:ml-24 pl-1 2xl:pl-2 outline-none focus:outline-none">
+                <img class="h-40 lg:block w-44" src="./assets/images/IBevent.png" alt="Logo">
+            </a>
+            <div class="flex">
+                <div class="hidden xl:flex dropdowns space-x-3">
+                    <div class="parent group relative flex flex-col h-full cursor-pointer">
+                        <div class="bg-blue h-full flex flex-col w-28 px-5 text-center justify-center">
+                            <img class="flex-shrink-0 w-full h-20" src="./assets/images/IBevent.png" alt="">
+                            <span class="text-md text-white font-bold uppercase">IB <br> EVENT</span>
+                            <div class="dropChild absolute z-20 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out left-0 -bottom-7 bg-blue h-7 w-28">
+                                <div class="absolute -bottom-12 left-8 dropTriangle border-t-blue">
+                                    <div class="absolute dropTriangleWhite">
+    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="child c1 z-10 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out absolute pt-0 px-5 w-56 bg-gray-50">
+                            <ul class="flex flex-col space-y-2 divide-y-2 py-3 pt-7">
+                                <li class="text-xl text-gray rubik-light pt-1">FOODTRAILER </li>
+                                <li class="text-xl text-gray rubik-light pt-1">BABYBORREL</li>
+                                <li class="text-xl text-gray rubik-light pt-1">BEDRIJFSFEESTEN</li>
+                                <li class="text-xl text-gray rubik-light pt-1">TROUWFEESTEN</li>
+                                <li class="text-xl text-gray rubik-light pt-1">ROUWMAALTIJDEN</li>
+                                <li class="text-xl text-gray rubik-light pt-1">TE Huur</li>
+                                <li class="text-xl text-gray rubik-light pt-1">Te Koop</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="parent group relative flex flex-col h-full cursor-pointer">
+                        <div class="bg-red h-full flex flex-col w-28 px-5 text-center justify-center">
+                            <img class="flex-shrink-0 w-full h-20" src="./assets/images/IBklusjes.png" alt="">
+                            <span class="text-md text-white font-bold uppercase">IB <br> KLUSJES</span>
+                            <div class="dropChild absolute z-20 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out left-0 -bottom-7 bg-red h-7 w-28">
+                                <div class="absolute -bottom-12 left-8 dropTriangle border-t-red">
+                                    <div class="absolute dropTriangleWhite">
+    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="child c2 z-10 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out absolute pt-0 px-5 w-56 bg-gray-50">
+                            <ul class="flex flex-col space-y-2 divide-y-2 py-3 pt-7">
+                                <li class="text-xl text-gray rubik-light pt-1">VERHUIS </li>
+                                <li class="text-xl text-gray rubik-light pt-1">OPKUISEN</li>
+                                <li class="text-xl text-gray rubik-light pt-1">MONTAGE</li>
+                                <li class="text-xl text-gray rubik-light pt-1">MAAT WERK</li>
+                                <li class="text-xl text-gray rubik-light pt-1">ANDERE</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="parent group relative flex flex-col h-full cursor-pointer">
+                        <div class="bg-yellow h-full flex flex-col w-28 px-5 text-center justify-center">
+                            <img class="flex-shrink-0 w-full h-20" src="./assets/images/IBtools.png" alt="">
+                            <span class="text-md text-white font-bold uppercase">IB <br> TOOLS</span>
+                            <div class="dropChild absolute z-20 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out left-0 -bottom-7 bg-yellow h-7 w-28">
+                                <div class="absolute -bottom-12 left-8 dropTriangle border-t-yellow">
+                                    <div class="absolute dropTriangleWhite">
+    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="child c3 z-10 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out absolute pt-0 px-5 w-56 bg-gray-50">
+                            <ul class="flex flex-col space-y-2 divide-y-2 py-3 pt-7">
+                                <li class="text-xl text-gray rubik-light pt-1">Te Huur</li>
+                                <li class="text-xl text-gray rubik-light pt-1">Te Koop</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="parent group relative flex flex-col h-full cursor-pointer">
+                        <div class="bg-darkBlue h-full flex flex-col w-28 px-5 text-center justify-center">
+                            <img class="flex-shrink-0 w-full h-20" src="./assets/images/IBheroes.png" alt="">
+                            <span class="text-md text-white font-bold uppercase">IB <br> Heroes</span>
+                            <div class="dropChild absolute z-20 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out left-0 -bottom-7 bg-darkBlue h-7 w-28">
+                                <div class="absolute -bottom-12 left-8 dropTriangle border-t-darkBlue">
+                                    <div class="absolute dropTriangleWhite">
+    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="child c4 z-10 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out absolute pt-0 px-5 w-56 bg-gray-50">
+                            <ul class="flex flex-col space-y-2 divide-y-2 py-3 pt-7">
+                                <li class="text-xl text-gray rubik-light pt-1">IB HEROES for hire</li>
+                                <li class="text-xl text-gray rubik-light pt-1">IB STAGEHANDS</li>
+                                <li class="text-xl text-gray rubik-light pt-1">IB HOSTESS for hire</li>
+                                <li class="text-xl text-gray rubik-light pt-1">IB PARKINGBOY</li>
+                                <li class="text-xl text-gray rubik-light pt-1">IB STEWARD</li>
+                                <li class="text-xl text-gray rubik-light pt-1">IB VACATURES</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:flex ml-5 md:mr-32 mt-3">
+                    <a href="#" class="pl-4 2xl:pl-8 py-2 text-xs 2xl:text-sm h-8">WIE</a>
+                    <a href="#" class="pl-4 2xl:pl-8 py-2 text-xs 2xl:text-sm h-8">CASES</a>
+                    <a href="#" class="pl-4 2xl:pl-8 py-2 text-xs 2xl:text-sm h-8">REFERENTIES</a>
+                    <a href="#" class="pl-4 2xl:pl-8 py-2 text-xs 2xl:text-sm h-8">NEWS</a>
+                    <a href="#" class="pl-4 2xl:pl-8 py-2 text-xs 2xl:text-sm h-8">CONTACT</a>
+                </div>
+            </div>
+        </nav>
+        <div class="hidden md:block flex-none absolute right-0 z-10 -mt-1">
+            <a href="#" class="-mr-16 circle1 focus:outline-none text-center">
+                <span class="absolute w-36 left-0 ml-3 mt-2 leading-7 text-2xl font-bold text-white">
+                    VRAAG UW
+                    OFFERTE
+                    AAN
+                </span>
+            </a>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mySidebar" class="hidden h-full pt-0.5">
+            <div id="actualSidebar" class="relative overflow-y-auto w-2/4 xl:w-full lg:mt-0 lg:mb-0 bg-white rounded-tr-2xl shadow-lg">
+                <!-- For Mobile Sidebar Cross Button  -->
+                <div class="mt-3 flex justify-end mr-4">
+                  <button type="button"id="closeSidebarIcon" onclick="closeSidebar()" class="hidden flex-shrink-0 inline-flex focus:outline-none">
+                      <svg class="h-7 w-7 text-blue hover:text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                  </button>
+                </div>
+                <div class="flex flex-col w-full ml-4">
+                    <div class="flex w-full flex-col mt-3 divide-y-2">
+                        <div class="dropdown dropdown-6 group py-2">
+                            <a href="#" onclick="toggleDropDown(event)" class="text-md text-blue">IB EVENT
+                                <svg class="h-5 w-5 inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                            <ul class="dropdown_menu dropdown_menu--animated dropdown_menu-6 flex flex-col list-disc list-inside">
+                                <li class="py-0.5 text-sm">FOODTRAILER </li>
+                                <li class="py-0.5 text-sm">BABYBORREL</li>
+                                <li class="py-0.5 text-sm">BEDRIJFSFEESTEN</li>
+                                <li class="py-0.5 text-sm">TROUWFEESTEN</li>
+                                <li class="py-0.5 text-sm">ROUWMAALTIJDEN</li>
+                                <li class="py-0.5 text-sm">TE Huur</li>
+                                <li class="py-0.5 text-sm">Te Koop</li>
+                            </ul>
+                        </div>
+                        <div class="dropdown dropdown-6 py-2">
+                            <a href="#" onclick="toggleDropDown(event)" class="text-md text-red">IB KLUSJES
+                                <svg class="h-5 w-5 inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                            <ul class="dropdown_menu dropdown_menu--animated dropdown_menu-6 flex flex-col list-disc list-inside">
+                                <li class="py-0.5 text-sm">VERHUIS </li>
+                                <li class="py-0.5 text-sm">OPKUISEN</li>
+                                <li class="py-0.5 text-sm">MONTAGE</li>
+                                <li class="py-0.5 text-sm">MAAT WERK</li>
+                                <li class="py-0.5 text-sm">ANDERE</li>
+                            </ul>
+                        </div>
+                        <div class="dropdown dropdown-6 py-2">
+                            <a href="#" onclick="toggleDropDown(event)" class="text-md text-yellow">IB TOOLS
+                                <svg class="h-5 w-5 inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                            <ul class="dropdown_menu dropdown_menu--animated dropdown_menu-6 flex flex-col list-disc list-inside">
+                                <li class="py-0.5 text-sm">Te Huur</li>
+                                <li class="py-0.5 text-sm">Te Koop</li>
+                            </ul>
+                        </div>
+                        <div class="dropdown dropdown-6 py-2">
+                            <a href="#" onclick="toggleDropDown(event)" class="text-md text-darkBlue">IB Heroes 
+                                <svg class="h-5 w-5 inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                            <ul class="dropdown_menu dropdown_menu--animated dropdown_menu-6 flex flex-col list-disc list-inside">
+                                <li class="py-0.5 text-sm">IB HEROES for hire </li>
+                                <li class="py-0.5 text-sm">IB STAGEHANDS</li>
+                                <li class="py-0.5 text-sm">IB HOSTESS for hire</li>
+                                <li class="py-0.5 text-sm">IB PARKINGBOY</li>
+                                <li class="py-0.5 text-sm">IB STEWARD</li>
+                                <li class="py-0.5 text-sm">IB VACATURES</li>
+                            </ul>
+                        </div>
+                        <a href="#" class="py-2 text-md">WIE</a>
+                        <a href="#" class="py-2 text-md">CASES</a>
+                        <a href="#" class="py-2 text-md">REFERENTIES</a>
+                        <a href="#" class="py-2 text-md">NEWS</a>
+                        <a href="#" class="py-2 text-md">CONTACT</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header> 
+    <!-- Home-Image  -->
+    <div id="hero-section" class="max-w-screen-2xl relative md:mr-20 2xl:mx-auto">
+        <div class="flex flex-col">
+            <h1 class="mt-44 sm:mt-40 lg:mt-96 ml-5 sm:ml-20 lg:ml-48 text-white text-2xl sm:text-4xl lg:text-6xl font-bold uppercase">
+                Cases
+            </h1>
+        </div>
+        <!-- triangle   -->
+        <div class="absolute h-12 w-12 triangle left-0 top-0 mt-0 ml-28">
+        </div>
+        <!-- Social Icons  -->
+        <div class="hidden lg:block absolute h-12 w-12 bg-white rounded-full right-0 top-0 mt-20 -mr-5">
+            <div class="flex items-center h-full">
+                <svg class="h-5 w-5 ml-3 text-blue" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" class="svg-inline--fa fa-facebook-f fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                    <path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path>
+                </svg>
+            </div>
+        </div>
+        <div class="hidden lg:block absolute h-12 w-12 bg-white rounded-full right-0 top-0 mt-36 -mr-5">
+            <div class="flex items-center h-full">
+                <svg class="h-5 w-5 ml-3 text-blue" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin-in" class="svg-inline--fa fa-linkedin-in fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <!-- Contect Section -->
+    <div id="tabs-id" class="relative max-w-screen-2xl px-5 md:px-20 mt-20 mx-auto lg:grid lg:grid-cols-5 xl:grid-cols-3 items-stretch">
+        <!-- Content area -->
+        <div class="relative lg:col-span-2 xl:col-span-1">
+            <div class="flex flex-wrap">
+                <div class="w-full pr-5">
+                  <ul class="flex space-y-3 list-none flex-wrap flex-col divide-y-2">
+                    <li class="-mb-px last:mr-0 flex justify-between items-center text-center cursor-pointer rubik-light text-blue font-bold" onclick="changeAtiveTab(event,'tab-1')">
+                      <a class="text-xs text-2xl py-2 pt-3.5 capitalize md:uppercase">
+                        Huwelijk Bert & Sandra
+                      </a>
+                      <svg class="h-7 w-7 cursor-pointer text-blue plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd" />
+                      </svg>
+                    </li>
+                    <li class="-mb-px last:mr-0 flex justify-between items-center text-center cursor-pointer rubik-light text-gray" onclick="changeAtiveTab(event,'tab-2')">
+                      <a class="text-xs text-2xl py-2 pt-3.5 capitalize md:uppercase">
+                        fashion night deinze
+                      </a>
+                      <svg class="h-7 w-7 cursor-pointer text-blue plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd" />
+                      </svg>
+                    </li>
+                    <li class="-mb-px last:mr-0 flex justify-between items-center text-center cursor-pointer rubik-light text-gray" onclick="changeAtiveTab(event,'tab-3')">
+                        <a class="text-xs text-2xl py-2 pt-3.5 capitalize md:uppercase">
+                            bea awards
+                        </a>
+                        <svg class="h-7 w-7 cursor-pointer text-blue plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd" />
+                        </svg>
+                    </li>
+                    <li class="-mb-px last:mr-0 flex justify-between items-center text-center cursor-pointer rubik-light text-gray" onclick="changeAtiveTab(event,'tab-4')">
+                        <a class="text-xs text-2xl py-2 pt-3.5 capitalize md:uppercase">
+                            Huwelijk Bert & Sandra
+                        </a>
+                        <svg class="h-7 w-7 cursor-pointer text-blue plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd" />
+                        </svg>
+                    </li>
+                    <li class="-mb-px last:mr-0 flex justify-between items-center text-center cursor-pointer rubik-light text-gray" onclick="changeAtiveTab(event,'tab-5')">
+                        <a class="text-xs text-2xl py-2 pt-3.5 capitalize md:uppercase">
+                            fashion night deinze
+                        </a>
+                        <svg class="h-7 w-7 cursor-pointer text-blue plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd" />
+                        </svg>
+                    </li>
+                    <li class="-mb-px last:mr-0 flex justify-between items-center text-center cursor-pointer rubik-light text-gray" onclick="changeAtiveTab(event,'tab-6')">
+                        <a class="text-xs text-2xl py-2 pt-3.5 capitalize md:uppercase">
+                            bea awards
+                        </a>
+                        <svg class="h-7 w-7 cursor-pointer text-blue plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd" />
+                        </svg>
+                    </li>
+                    <li class="-mb-px last:mr-0 flex justify-between items-center text-center cursor-pointer rubik-light text-gray" onclick="changeAtiveTab(event,'tab-7')">
+                        <a class="text-xs text-2xl py-2 pt-3.5 capitalize md:uppercase">
+                            Huwelijk Bert & Sandra
+                        </a>
+                        <svg class="h-7 w-7 cursor-pointer text-blue plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd" />
+                        </svg>
+                    </li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+        <div class="relative lg:col-span-3 xl:col-span-2 lg:ml-20 xl:ml-20 mt-7 lg:mt-0">
+            <div class="relative bg-white w-full">
+                <div class="lg:px-4 flex-auto">
+                    <div class="block md:hidden border-t-2 mt-3 mb-8 mx-5 mx-auto border-blue"></div>
+                  <div class="tab-content tab-space">
+                    <div class="block" id="tab-1">
+                        <div class="flex flex-col space-y-10">
+                            <h1 class="text-2xl font-bold md:font-normal md:text-6xl text-blue rubik-light capitalize">
+                                <span>
+                                    Huwelijk Bert & Sandra
+                                </span>
+                            </h1>
+                            <p class="text-xs text-2xl rubik-light">
+                                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                                quis nostrud exercitation commodo consequat…
+                            </p>
+                            <div class="mx-auto">
+                                <img class="object-contain lg:object-cover w-full max-w-full" src="./assets/images/slider.png">
+                            </div>
+                            <p class="text-xs text-2xl rubik-light">
+                                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                                quis nostrud exercitation commodo consequat…
+                            </p>
+                            <div class="sm:grid grid-cols-2 space-y-2 sm:space-y-0 sm:space-x-2">
+                                <img class="object-contain lg:object-cover w-full max-w-full" src="./assets/images/Image 10.png">
+                                <img class="object-contain lg:object-cover w-full max-w-full" src="./assets/images/Image 11.png">
+                            </div>
+                            <p class="text-xs text-2xl rubik-light">
+                                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+                                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation commodo consequat…“Lorem ipsum dolor 
+                                sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                Ut enim ad minim veniam, quis nostrud exercitation commodo consequat…“Lorem ipsum dolor sit amet, consectetur 
+                                adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                                quis nostrud exercitation commodo consequat…
+                            </p>
+                            <div class="sm:grid grid-cols-2 space-y-2 sm:space-y-0 sm:space-x-2">
+                                <img class="object-contain lg:object-cover w-full max-w-full" src="./assets/images/Image 12.png">
+                                <img class="object-contain lg:object-cover w-full max-w-full" src="./assets/images/Image 13.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden" id="tab-2">
+                        <div class="flex flex-col space-y-10">
+                            <h1 class="text-2xl font-bold md:font-normal md:text-6xl text-blue rubik-light capitalize">
+                                <span>
+                                    fashion night deinze
+                                </span>
+                            </h1>
+                            <p class="text-xs text-2xl rubik-light">
+                                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                                quis nostrud exercitation commodo consequat…
+                            </p>
+                            <div class="mx-auto">
+                                <img class="object-contain lg:object-cover w-full max-w-full" src="./assets/images/slider.png">
+                            </div>
+                            <p class="text-xs text-2xl rubik-light">
+                                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                                quis nostrud exercitation commodo consequat…
+                            </p>
+                            <div class="sm:grid grid-cols-2 space-y-2 sm:space-y-0 sm:space-x-2">
+                                <img class="object-contain lg:object-cover w-full max-w-full" src="./assets/images/Image 10.png">
+                                <img class="object-contain lg:object-cover w-full max-w-full" src="./assets/images/Image 11.png">
+                            </div>
+                            <p class="text-xs text-2xl rubik-light">
+                                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+                                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation commodo consequat…“Lorem ipsum dolor 
+                                sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                Ut enim ad minim veniam, quis nostrud exercitation commodo consequat…“Lorem ipsum dolor sit amet, consectetur 
+                                adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                                quis nostrud exercitation commodo consequat…
+                            </p>
+                            <div class="sm:grid grid-cols-2 space-y-2 sm:space-y-0 sm:space-x-2">
+                                <img class="object-contain lg:object-cover w-full max-w-full" src="./assets/images/Image 12.png">
+                                <img class="object-contain lg:object-cover w-full max-w-full" src="./assets/images/Image 13.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden" id="tab-3">
+                        <div class="flex flex-col space-y-10">
+                            <h1 class="text-2xl font-bold md:font-normal md:text-6xl text-blue rubik-light capitalize">
+                                <span>
+                                    bea awards
+                                </span>
+                            </h1>
+                            <p class="text-xs text-2xl rubik-light">
+                                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                                quis nostrud exercitation commodo consequat…
+                            </p>
+                            <div class="mx-auto">
+                                <img class="object-contain lg:object-cover w-full max-w-full" src="./assets/images/slider.png">
+                            </div>
+                            <p class="text-xs text-2xl rubik-light">
+                                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                                quis nostrud exercitation commodo consequat…
+                            </p>
+                            <div class="sm:grid grid-cols-2 space-y-2 sm:space-y-0 sm:space-x-2">
+                                <img class="object-contain lg:object-cover w-full max-w-full" src="./assets/images/Image 10.png">
+                                <img class="object-contain lg:object-cover w-full max-w-full" src="./assets/images/Image 11.png">
+                            </div>
+                            <p class="text-xs text-2xl rubik-light">
+                                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+                                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation commodo consequat…“Lorem ipsum dolor 
+                                sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                Ut enim ad minim veniam, quis nostrud exercitation commodo consequat…“Lorem ipsum dolor sit amet, consectetur 
+                                adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                                quis nostrud exercitation commodo consequat…
+                            </p>
+                            <div class="sm:grid grid-cols-2 space-y-2 sm:space-y-0 sm:space-x-2">
+                                <img class="object-contain lg:object-cover w-full max-w-full" src="./assets/images/Image 12.png">
+                                <img class="object-contain lg:object-cover w-full max-w-full" src="./assets/images/Image 13.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden" id="tab-4">
+                        <div class="flex flex-col space-y-10">
+                            <h1 class="text-2xl font-bold md:font-normal md:text-6xl text-blue rubik-light capitalize">
+                                <span>
+                                    Huwelijk Bert & Sandra
+                                </span>
+                            </h1>
+                            <p class="text-xs text-2xl rubik-light">
+                                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                                quis nostrud exercitation commodo consequat…
+                            </p>
+                            <div class="mx-auto">
+                                <img class="object-contain lg:object-cover w-full max-w-full" src="./assets/images/slider.png">
+                            </div>
+                            <p class="text-xs text-2xl rubik-light">
+                                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                                quis nostrud exercitation commodo consequat…
+                            </p>
+                            <div class="sm:grid grid-cols-2 space-y-2 sm:space-y-0 sm:space-x-2">
+                                <img class="object-contain lg:object-cover w-full max-w-full" src="./assets/images/Image 10.png">
+                                <img class="object-contain lg:object-cover w-full max-w-full" src="./assets/images/Image 11.png">
+                            </div>
+                            <p class="text-xs text-2xl rubik-light">
+                                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+                                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation commodo consequat…“Lorem ipsum dolor 
+                                sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                Ut enim ad minim veniam, quis nostrud exercitation commodo consequat…“Lorem ipsum dolor sit amet, consectetur 
+                                adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                                quis nostrud exercitation commodo consequat…
+                            </p>
+                            <div class="sm:grid grid-cols-2 space-y-2 sm:space-y-0 sm:space-x-2">
+                                <img class="object-contain lg:object-cover w-full max-w-full" src="./assets/images/Image 12.png">
+                                <img class="object-contain lg:object-cover w-full max-w-full" src="./assets/images/Image 13.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden" id="tab-5">
+                        <div class="flex flex-col space-y-10">
+                            <h1 class="text-2xl font-bold md:font-normal md:text-6xl text-blue rubik-light capitalize">
+                                <span>
+                                    fashion night deinze
+                                </span>
+                            </h1>
+                            <p class="text-xs text-2xl rubik-light">
+                                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                                quis nostrud exercitation commodo consequat…
+                            </p>
+                            <div class="mx-auto">
+                                <img class="object-contain lg:object-cover w-full max-w-full" src="./assets/images/slider.png">
+                            </div>
+                            <p class="text-xs text-2xl rubik-light">
+                                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                                quis nostrud exercitation commodo consequat…
+                            </p>
+                            <div class="sm:grid grid-cols-2 space-y-2 sm:space-y-0 sm:space-x-2">
+                                <img class="object-contain lg:object-cover w-full max-w-full" src="./assets/images/Image 10.png">
+                                <img class="object-contain lg:object-cover w-full max-w-full" src="./assets/images/Image 11.png">
+                            </div>
+                            <p class="text-xs text-2xl rubik-light">
+                                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+                                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation commodo consequat…“Lorem ipsum dolor 
+                                sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                Ut enim ad minim veniam, quis nostrud exercitation commodo consequat…“Lorem ipsum dolor sit amet, consectetur 
+                                adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                                quis nostrud exercitation commodo consequat…
+                            </p>
+                            <div class="sm:grid grid-cols-2 space-y-2 sm:space-y-0 sm:space-x-2">
+                                <img class="object-contain lg:object-cover w-full max-w-full" src="./assets/images/Image 12.png">
+                                <img class="object-contain lg:object-cover w-full max-w-full" src="./assets/images/Image 13.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden" id="tab-6">
+                        <div class="flex flex-col space-y-10">
+                            <h1 class="text-2xl font-bold md:font-normal md:text-6xl text-blue rubik-light capitalize">
+                                <span>
+                                    bea awards
+                                </span>
+                            </h1>
+                            <p class="text-xs text-2xl rubik-light">
+                                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                                quis nostrud exercitation commodo consequat…
+                            </p>
+                            <div class="mx-auto">
+                                <img class="object-contain lg:object-cover w-full max-w-full" src="./assets/images/slider.png">
+                            </div>
+                            <p class="text-xs text-2xl rubik-light">
+                                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                                quis nostrud exercitation commodo consequat…
+                            </p>
+                            <div class="sm:grid grid-cols-2 space-y-2 sm:space-y-0 sm:space-x-2">
+                                <img class="object-contain lg:object-cover w-full max-w-full" src="./assets/images/Image 10.png">
+                                <img class="object-contain lg:object-cover w-full max-w-full" src="./assets/images/Image 11.png">
+                            </div>
+                            <p class="text-xs text-2xl rubik-light">
+                                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+                                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation commodo consequat…“Lorem ipsum dolor 
+                                sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                Ut enim ad minim veniam, quis nostrud exercitation commodo consequat…“Lorem ipsum dolor sit amet, consectetur 
+                                adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                                quis nostrud exercitation commodo consequat…
+                            </p>
+                            <div class="sm:grid grid-cols-2 space-y-2 sm:space-y-0 sm:space-x-2">
+                                <img class="object-contain lg:object-cover w-full max-w-full" src="./assets/images/Image 12.png">
+                                <img class="object-contain lg:object-cover w-full max-w-full" src="./assets/images/Image 13.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden" id="tab-7">
+                        <div class="flex flex-col space-y-10">
+                            <h1 class="text-2xl font-bold md:font-normal md:text-6xl text-blue rubik-light capitalize">
+                                <span>
+                                    Huwelijk Bert & Sandra
+                                </span>
+                            </h1>
+                            <p class="text-xs text-2xl rubik-light">
+                                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                                quis nostrud exercitation commodo consequat…
+                            </p>
+                            <div class="mx-auto">
+                                <img class="object-contain lg:object-cover w-full max-w-full" src="./assets/images/slider.png">
+                            </div>
+                            <p class="text-xs text-2xl rubik-light">
+                                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                                quis nostrud exercitation commodo consequat…
+                            </p>
+                            <div class="sm:grid grid-cols-2 space-y-2 sm:space-y-0 sm:space-x-2">
+                                <img class="object-contain lg:object-cover w-full max-w-full" src="./assets/images/Image 10.png">
+                                <img class="object-contain lg:object-cover w-full max-w-full" src="./assets/images/Image 11.png">
+                            </div>
+                            <p class="text-xs text-2xl rubik-light">
+                                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+                                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation commodo consequat…“Lorem ipsum dolor 
+                                sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                Ut enim ad minim veniam, quis nostrud exercitation commodo consequat…“Lorem ipsum dolor sit amet, consectetur 
+                                adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                                quis nostrud exercitation commodo consequat…
+                            </p>
+                            <div class="sm:grid grid-cols-2 space-y-2 sm:space-y-0 sm:space-x-2">
+                                <img class="object-contain lg:object-cover w-full max-w-full" src="./assets/images/Image 12.png">
+                                <img class="object-contain lg:object-cover w-full max-w-full" src="./assets/images/Image 13.png">
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <!-- Content End  -->
+    </div>
+    <!-- Footer  -->
+    <div class="max-w-screen-2xl flex justify-center relative bg-blue py-7 mt-20 px-5 md:px-20 mx-auto">
+        <div class="mt-80 md:mt-0 flex-auto relative max-w-full">
+            <div class="md:flex md:justify-between lg:justify-start md:gap-x-24 space-y-5 md:space-y-0">
+                <ul class="space-y-4 text-center lg:text-left">
+                    <li>
+                        <a href="#" class="text-2xl font-bold text-white">
+                            IB EVENT
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-2xl font-bold text-white">
+                            IB KLUSJES
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-2xl font-bold text-white">
+                            IB TOOLS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-2xl font-bold text-white">
+                            IB HEROES
+                        </a>
+                    </li>
+                </ul>
+                <ul class="space-y-4 text-center lg:text-left">
+                    <li>
+                        <a href="#" class="text-2xl rubik-light text-white">
+                            WIE
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-2xl rubik-light text-white">
+                            CASES
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-2xl rubik-light text-white">
+                            REFERENTIES
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-2xl rubik-light text-white">
+                            NEWS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-2xl rubik-light text-white">
+                            CONTACT
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="absolute top-0 mx-auto h-full">
+            <div>
+                <img class="h-36 mx-auto -mt-12" src="./assets/images/IBevent.png" alt="">
+            </div>
+            <ul class="space-y-0.5 text-center">
+                <li>
+                    <a href="#" class="text-2xl rubik-light text-white">
+                        Oostmeersdreef 5
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="text-2xl rubik-light text-white">
+                        9800 Deinze
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="text-2xl rubik-light text-white">
+                        +32 (0) 476 26 06 06
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="text-2xl rubik-light text-white">
+                        info@ibevent.be
+                    </a>
+                </li>
+            </ul>
+            <!-- Social Icons  -->
+            <div class="flex space-x-5 justify-center">
+                <div class="h-12 w-12 bg-white rounded-full z-20 mt-6">
+                    <div class="flex items-center h-full">
+                        <svg class="h-5 w-5 ml-3 text-blue" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" class="svg-inline--fa fa-facebook-f fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                            <path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="h-12 w-12 bg-white rounded-full z-20 mt-6">
+                    <div class="flex items-center h-full">
+                        <svg class="h-5 w-5 ml-3 text-blue" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin-in" class="svg-inline--fa fa-linkedin-in fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hidden lg:block flex-none absolute top-0 right-40 z-10 -mt-1">
+            <a href="#" class="-mr-16 circleFooter focus:outline-none text-center">
+                <span class="absolute w-36 left-0 ml-3 mt-2 leading-7 text-2xl font-bold text-blue">
+                    VRAAG UW
+                    OFFERTE
+                    AAN
+                </span>
+            </a>
+        </div>
+    </div>
+    <div class="max-w-screen-2xl relative bg-white h-12">
+    </div>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"></script>
+    <script>
+
+    function toggleDropDown(event) {
+        let aElement = event.target;
+        if (event.target.nodeName == "svg") {
+            aElement = event.target.parentNode;
+        }
+        if (event.target.nodeName == "path") {
+            aElement = event.target.parentNode.parentNode;
+        }
+        $(aElement).siblings(".dropdown_menu.dropdown_menu--animated").toggleClass("block");
+    }
+
+    function openSidebar() {
+        $('#mySidebar').removeClass("hidden");
+        $('#mySidebar').addClass("fixed inset-0 flex z-40");
+        $('#mySidebar').addClass("sidebar-animation animation-out");
+        $("<div class='sidebarOverlay fixed inset-0'><div class='absolute inset-0 bg-gray-600 opacity-75'></div></div>").insertBefore('#actualSidebar');
+        $('#closeSidebarIcon').removeClass("hidden");
+        $('#openSidebarIcon').addClass("hidden");
+    }
+    function closeSidebar() {
+        $('#mySidebar').removeClass("sidebar-animation");
+        $(".sidebarOverlay").remove();
+        $("#mySidebar").addClass('').delay(1000).queue(function() {
+            $(".sidebarOverlay").remove();
+            $('#mySidebar').addClass("hidden");
+            $('#mySidebar').removeClass("fixed inset-0 flex z-40");
+            $('#closeSidebarIcon').addClass("hidden");
+            $('#openSidebarIcon').removeClass("hidden");
+            $('#mySidebar').removeClass("animation-out");
+        });
+    }
+    function changeAtiveTab(event,tabID){
+      let element = event.target;
+      console.log(element.nodeName, event.target)
+      while(element.nodeName !== "LI"){
+        element = element.parentNode;
+      }
+      ulElement = element.parentNode.parentNode;
+      aElements = ulElement.querySelectorAll("li");
+      tabContents = document.getElementById("tabs-id").querySelectorAll(".tab-content > div");
+      for(let i = 0 ; i < aElements.length; i++){
+        aElements[i].classList.add("text-gray");
+        aElements[i].classList.remove("text-blue");
+        aElements[i].classList.remove("font-bold");
+        tabContents[i].classList.add("hidden");
+        tabContents[i].classList.remove("block");
+      }
+      element.classList.add("text-blue");
+      element.classList.add("font-bold");
+      element.classList.remove("text-gray");
+      document.getElementById(tabID).classList.remove("hidden");
+      document.getElementById(tabID).classList.add("block");
+    }
+    </script>
+</body>
+</html>
